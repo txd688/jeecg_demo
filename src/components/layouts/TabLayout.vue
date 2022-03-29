@@ -1,6 +1,6 @@
 <template>
   <global-layout>
-    sdfsfssssssssssssssssssssss
+    <router-view/>
   </global-layout>
 </template>
 

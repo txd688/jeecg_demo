@@ -1,5 +1,5 @@
 <template>
-  <div>首页</div>
+  <div>核心</div>
 </template>
 <script>
 export default {
