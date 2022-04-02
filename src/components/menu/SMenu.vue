@@ -11,7 +11,7 @@
       @select="subMenuClick">
       <template v-for="item in menuList">
         <a-menu-item v-if="!item.children" :key="item.path">
-          {{item.meta.title}}
+          <a-icon :type="item.meta.icon" />{{item.meta.title}}
         </a-menu-item>
         <template v-else>
           <s-menu-child :menuInfo="item" :key="item.path"></s-menu-child>

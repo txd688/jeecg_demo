@@ -34,6 +34,7 @@ export const asyncRouterMap = [
                 meta:{
                     title:'首页',
                     permission: 'homepage',
+                    icon:'home',
                     hidden:false
                 },
                 component: () => import("@/views/dashboard/Analysis")

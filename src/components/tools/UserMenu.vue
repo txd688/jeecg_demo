@@ -8,6 +8,7 @@
     </span>
     <a-dropdown>
       <span class="action action-full">
+        <span class="img"></span>
         <span>欢迎您，XXX</span>
       </span>
       <a-menu slot="overlay">
@@ -16,6 +17,41 @@
             <a-icon type="user"
                     style="margin-right:8px;"></a-icon>
             <span>个人中心</span>
+          </router-link>
+        </a-menu-item>
+        <a-menu-item key="1">
+          <router-link :to="{ name: 'account-center' }">
+            <a-icon type="setting"
+                    style="margin-right:8px;"></a-icon>
+            <span>账户设置</span>
+          </router-link>
+        </a-menu-item>
+        <a-menu-item key="2">
+          <router-link :to="{ name: 'account-center' }">
+            <a-icon type="tool"
+                    style="margin-right:8px;"></a-icon>
+            <span>系统设置</span>
+          </router-link>
+        </a-menu-item>
+        <a-menu-item key="3">
+          <router-link :to="{ name: 'account-center' }">
+            <a-icon type="setting"
+                    style="margin-right:8px;"></a-icon>
+            <span>密码修改</span>
+          </router-link>
+        </a-menu-item>
+        <a-menu-item key="4">
+          <router-link :to="{ name: 'account-center' }">
+            <a-icon type="cluster"
+                    style="margin-right:8px;"></a-icon>
+            <span>切换部门</span>
+          </router-link>
+        </a-menu-item>
+        <a-menu-item key="5">
+          <router-link :to="{ name: 'account-center' }">
+            <a-icon type="sync"
+                    style="margin-right:8px;"></a-icon>
+            <span>清理缓存</span>
           </router-link>
         </a-menu-item>
       </a-menu>
@@ -55,6 +91,15 @@ export default {
   .action-full {
     height: 100%;
     line-height: revert;
+    .img {
+      vertical-align: middle;
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      border: 1px solid #ccc;
+      margin-right: 8px;
+    }
   }
 }
 </style>
