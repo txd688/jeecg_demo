@@ -65,19 +65,20 @@ export const asyncRouterMap = [
                 name:'system',
                 component:RouteView,
                 meta:{
-                    title:'核心也面',
-                    permission:'system'
+                    title:'系统管理',
+                    permission:'system',
+                    icon:'setting'
                 },
-                redirect:'/system/system',
+                redirect:'/system/userList',
                 children:[
                     {
                         meta:{
-                            title:'核心也面',
+                            title:'用户管理',
                             permission: 'system:list'
                         },
-                        path: '/system/system',
-                        name: 'system',
-                        component: () => import("@/views/system/System")
+                        path: '/system/userList',
+                        name: 'userList',
+                        component: () => import("@/views/system/UserList")
                     }
                 ]
             }

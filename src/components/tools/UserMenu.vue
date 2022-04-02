@@ -58,7 +58,7 @@
     </a-dropdown>
     <span class="action">
       <a href="javascript:;"
-         class="logout_title">
+         class="logout_title" @click="handleLogout">
         <a-icon type="logout"></a-icon>
         <span>&nbsp;退出登录</span>
       </a>
@@ -67,7 +67,25 @@
 </template>
 <script>
 export default {
-
+  name:"UserMenu",
+  data(){
+    return {
+      
+    }
+  },
+  methods:{
+    handleLogout(){
+      let that = this;
+      this.$confirm({
+        title:'提示',
+        content:"真的要注销登录吗？",
+        onOk(){
+          that.$router.push('/user/login')
+        },
+        onCancel(){}
+      })
+    }
+  }
 }
 </script>
 <style lang="less" scoped>

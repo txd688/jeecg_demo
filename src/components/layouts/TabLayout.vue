@@ -21,7 +21,6 @@
         <router-view />
       </keep-alive>
     </div>
-
   </global-layout>
 </template>
 
